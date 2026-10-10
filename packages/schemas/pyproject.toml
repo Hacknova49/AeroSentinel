@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aerosentinel-schemas"
+version = "0.1.0"   # SemVer: breaking contract change => major bump + dependent-owner review
+description = "Frozen data contracts and DroneInterface for AeroSentinel (module A1)"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aerosentinel_schemas"]

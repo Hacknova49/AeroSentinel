@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aerosentinel"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "aerosentinel-schemas",
+  "numpy>=1.26",
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "psycopg[binary]>=3.1",
+]
+
+[project.optional-dependencies]
+# Heavy ML deps are opt-in so CI for non-ML modules stays fast.
+ml = ["torch>=2.2", "ultralytics>=8.2", "opencv-python>=4.9", "scikit-learn>=1.4",
+      "xgboost>=2.0", "pandas>=2.2", "pyarrow>=15"]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.4", "mypy>=1.10"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aerosentinel"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "../integration/tests"]

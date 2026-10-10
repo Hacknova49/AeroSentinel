@@ -1,0 +1,13 @@
+# Replace with real GitHub handles / teams. Contract changes need ALL dependent owners (use branch protection).
+/packages/schemas/                          @your-org/member-1 @your-org/member-2
+/python/src/aerosentinel/storage/           @your-org/member-1
+/python/src/aerosentinel/ingestion/         @your-org/member-1
+/python/src/aerosentinel/api/               @your-org/member-2
+/integration/                               @your-org/member-2
+/dashboard/                                 @your-org/member-3
+/python/src/aerosentinel/geosim/            @your-org/member-4
+/python/src/aerosentinel/datagen/           @your-org/member-4
+/unity/                                     @your-org/member-5
+/python/src/aerosentinel/autonomy/          @your-org/member-6
+/python/src/aerosentinel/perception/        @your-org/member-7
+/python/src/aerosentinel/intelligence/      @your-org/member-8
